@@ -1,21 +1,21 @@
 package com.example.todoapp.model;
-import java.util.Date;
+import java.sql.Date;
 
 public class Todo {
     private String title;
     private String id;  
     private String description;
     private String priority;    
-    private Date endDate00;
+    private Date endDate;
     private boolean completed;
 
-    public Todo(String title, String id, String description, String priority, Date endDate00) {
+    public Todo(String title, String id, String description, String priority, Date endDate, boolean completed) {
         this.title = title;
         this.id = id;
         this.description = description;
         this.priority = priority;
-        this.endDate00 = endDate00; 
-        this.completed = false;
+        this.endDate = endDate;
+        this.completed = completed;
     }       
 
     //getters and setters methods
@@ -34,12 +34,12 @@ public class Todo {
         return priority;
     }
 
-    public Date getEndDate00() {
-        return endDate00;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEndDate00(Date endDate00) {
-        this.endDate00 = endDate00;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public boolean getCompleted() {

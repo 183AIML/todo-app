@@ -13,11 +13,17 @@ public class TodoService {
     }
 
     public void addTodo(Todo t) {
-        todoDAO.add(t);
+        todoDAO.addTodo(t);
     }
 
-    public List<Todo> getTodo()
+    public List<Todo> getAllTodos()
     {
-        return todoDAO.getAll();
+        return todoDAO.getAllTodos();
     }
+    public Todo getTodoById(String id){
+        return todoDAO.getTodoById(id);
+    }
+    public void updateTodo(Todo t){
+        todoDAO.updateTodo(t);}
+
 }
